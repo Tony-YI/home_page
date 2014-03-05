@@ -47,7 +47,7 @@ p
     width: 27.3%;
     margin-left: 3%;
     margin-right: 3%;
-    height: 100%;
+    height: 90%;
     position: relative;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -63,10 +63,7 @@ p
     width: 29.3%;
     margin-left: 2%;
     margin-right: 2%;
-    height: 64%;
-    position: relative;
-    top: 18%;
-    bottom: 18%;
+    height: 100%;
     opacity: 1;
 }
 
