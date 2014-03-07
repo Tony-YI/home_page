@@ -1,0 +1,114 @@
+.body
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.85;
+    z-index: -2;
+}
+
+h2
+{
+    color: black;
+    opacity: 0.85;
+    overflow: hidden;
+    margin: auto;
+    font-size: 120%;
+}
+
+.content
+{
+    width: 100%;
+    position: absolute;
+    top: 7%;
+    bottom: 7%;
+    text-align: center;
+}
+
+.left
+{
+    position: relative;
+    float: left;
+    left: 5%;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    border: solid;
+    border-width: thin;
+    border-color: red;
+    opacity: 0.7;
+    overflow: scroll;
+    
+    background-image: url("./img/left_background.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.date:hover
+{
+    opacity: 1;
+}
+
+.date
+{
+    width: 80%;
+    color: white;
+    margin: 0 auto;
+    overflow: auto;
+    word-wrap: break-word;
+    margin-top: 10px;
+    border-bottom-style: dashed;
+    opacity: 0.7;
+}
+
+.right
+{
+    position: relative;
+    float: right;
+    right: 5%;
+    width: 65%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.show
+{
+    margin-bottom: 1%;
+    margin-top: 1%;
+    height: auto;
+    border: solid;
+    border-width: thin;
+    border-color: red;
+    opacity: 0.7;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    text-align: left;
+    overflow: auto;
+}
+
+.show:hover
+{
+    opacity: 0.9;
+}
+
+img
+{
+    width: 25%;
+    height: auto;
+}
+
+.text
+{
+    width: 70%;
+    height: auto;
+    color: white;
+    float: right;
+    word-wrap: break-word;
+}
