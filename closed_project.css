@@ -45,7 +45,7 @@ h2
     background-repeat: no-repeat;
 }
 
-a
+.left a
 {
     text-decoration: none;
 }
@@ -111,4 +111,40 @@ img
     color: white;
     float: right;
     word-wrap: break-word;
+}
+
+#TITLE
+{
+    font-size: 140%;
+}
+
+#DATE
+{
+}
+
+#ABSTRACT
+{
+}
+
+#ABSTRACT a
+{
+    color: red;
+}
+
+.more
+{
+    float: bottom;
+    position: relative;
+    text-align: right;
+    padding-right: 1%;
+}
+
+.more a
+{
+    color: white;
+}
+
+.more a:hover
+{
+    color: red;
 }
