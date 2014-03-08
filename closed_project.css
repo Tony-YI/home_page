@@ -109,6 +109,7 @@ img
     width: 70%;
     height: auto;
     color: white;
+    clear: both;
     float: right;
     word-wrap: break-word;
 }
