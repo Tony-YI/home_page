@@ -90,6 +90,8 @@ h2
     padding-right: 6px;
     padding-top: 4px;
     overflow: auto;
+    text-align: left;
+    clear: both;
 }
 
 .show:hover
@@ -97,16 +99,20 @@ h2
     opacity: 0.9;
 }
 
+.img
+{
+    float: left;
+    width: 25%;
+}
+
 img
 {
-    width: 25%;
+    width: 100%;
     height: auto;
-    text-align: left;
 }
 
 .text
 {
-    text-align: left;
     width: 70%;
     height: auto;
     color: white;
