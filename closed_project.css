@@ -89,7 +89,6 @@ h2
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 4px;
-    text-align: left;
     overflow: auto;
 }
 
@@ -102,20 +101,16 @@ img
 {
     width: 25%;
     height: auto;
-    position: relative;
-    left: 0px;
-    top: 0px;
+    text-align: left;
 }
 
 .text
 {
+    text-align: left;
     width: 70%;
     height: auto;
     color: white;
     float: right;
-    position: relative;
-    left: 0px;
-    top: 0px;
     word-wrap: break-word;
 }
 
@@ -139,7 +134,6 @@ img
 
 .more
 {
-    float: bottom;
     position: relative;
     text-align: right;
     padding-right: 1%;
