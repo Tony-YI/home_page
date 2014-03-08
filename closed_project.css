@@ -102,6 +102,7 @@ img
 {
     width: 25%;
     height: auto;
+    clear: both;
 }
 
 .text
