@@ -1,0 +1,4 @@
+1. find the Eclipse project path
+2. sftp root@192.168.43.[???] in the src/ dirctory
+3. put ESDC after every compilation
+

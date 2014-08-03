@@ -1,0 +1,15 @@
+Yocto Eclipse Plugin
+#http://downloads.yoctoproject.org/releases/eclipse-plugin/1.4/
+
+Linux Tools
+#location->http://download.eclipse.org/linuxtools/update
+
+Target Communication Framework plugin (necessary for yocto Eclipse plugin)
+#website->http://git.eclipse.org/c/tcf/org.eclipse.tcf.git/plain/docs/TCF%20Getting%20Started.html#Plugins
+#location->http://download.eclipse.org/tools/tcf/builds/1.1/nightly
+
+CDT plugin (necessary for TCF plugin)
+#http://www.eclipse.org/cdt/downloads.php
+
+Task management plugin (necessary for TCF plugIn)
+#http://download.eclipse.org/tm/downloads/

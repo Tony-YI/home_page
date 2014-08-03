@@ -1,0 +1,107 @@
+Setting pipeline to PAUSED ...
+Pipeline is live and does not need PREROLL ...
+Setting pipeline to PLAYING ...
+New clock: GstSystemClock
+/GstPipeline:pipeline0/GstJpegDec:jpegdec0.GstPad:sink: caps = image/jpeg
+/GstPipeline:pipeline0/GstJpegDec:jpegdec0.GstPad:src: caps = video/x-raw-yuv, format=(fourcc)I420, width=(int)1280, height=(int)960, framerate=(fraction)0/1
+/GstPipeline:pipeline0/GstFFMpegCsp:ffmpegcsp0.GstPad:src: caps = video/x-raw-yuv, format=(fourcc)YV12, framerate=(fraction)0/1, width=(int)1280, height=(int)960, interlaced=(boolean)false, pixel-aspect-ratio=(fraction)1/1
+/GstPipeline:pipeline0/GstFFMpegCsp:ffmpegcsp0.GstPad:sink: caps = video/x-raw-yuv, format=(fourcc)I420, width=(int)1280, height=(int)960, framerate=(fraction)0/1
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter0.GstPad:src: caps = video/x-raw-yuv, format=(fourcc)YV12, framerate=(fraction)0/1, width=(int)1280, height=(int)960, interlaced=(boolean)false, pixel-aspect-ratio=(fraction)1/1
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter0.GstPad:sink: caps = video/x-raw-yuv, format=(fourcc)YV12, framerate=(fraction)0/1, width=(int)1280, height=(int)960, interlaced=(boolean)false, pixel-aspect-ratio=(fraction)1/1
+/GstPipeline:pipeline0/GstVideoFlip:videoflip0.GstPad:src: caps = video/x-raw-yuv, format=(fourcc)YV12, framerate=(fraction)0/1, width=(int)1280, height=(int)960, interlaced=(boolean)false, pixel-aspect-ratio=(fraction)1/1
+/GstPipeline:pipeline0/GstVideoFlip:videoflip0.GstPad:sink: caps = video/x-raw-yuv, format=(fourcc)YV12, framerate=(fraction)0/1, width=(int)1280, height=(int)960, interlaced=(boolean)false, pixel-aspect-ratio=(fraction)1/1
+/GstPipeline:pipeline0/GstVideoRate:videorate0.GstPad:src: caps = video/x-raw-yuv, format=(fourcc)YV12, framerate=(fraction)25/1, width=(int)1280, height=(int)960, interlaced=(boolean)false, pixel-aspect-ratio=(fraction)1/1
+/GstPipeline:pipeline0/GstVideoRate:videorate0.GstPad:sink: caps = video/x-raw-yuv, format=(fourcc)YV12, framerate=(fraction)0/1, width=(int)1280, height=(int)960, interlaced=(boolean)false, pixel-aspect-ratio=(fraction)1/1
+FOUND TAG      : found by element "wavparse0".
+     audio codec: Uncompressed 16-bit PCM audio
+/GstPipeline:pipeline0/GstAudioConvert:audioconvert0.GstPad:src: caps = audio/x-raw-float, endianness=(int)1234, width=(int)32, rate=(int)44100, channels=(int)1
+/GstPipeline:pipeline0/GstAudioConvert:audioconvert0.GstPad:sink: caps = audio/x-raw-int, endianness=(int)1234, channels=(int)1, width=(int)16, depth=(int)16, signed=(boolean)true, rate=(int)44100
+/GstPipeline:pipeline0/GstVolume:volume0.GstPad:src: caps = audio/x-raw-float, endianness=(int)1234, width=(int)32, rate=(int)44100, channels=(int)1
+/GstPipeline:pipeline0/GstVolume:volume0.GstPad:sink: caps = audio/x-raw-float, endianness=(int)1234, width=(int)32, rate=(int)44100, channels=(int)1
+/GstPipeline:pipeline0/GstRgLimiter:rglimiter0.GstPad:src: caps = audio/x-raw-float, endianness=(int)1234, width=(int)32, rate=(int)44100, channels=(int)1
+/GstPipeline:pipeline0/GstRgLimiter:rglimiter0.GstPad:sink: caps = audio/x-raw-float, endianness=(int)1234, width=(int)32, rate=(int)44100, channels=(int)1
+/GstPipeline:pipeline0/GstPulseSink:pulsesink0.GstPad:sink: caps = audio/x-raw-float, endianness=(int)1234, width=(int)32, rate=(int)44100, channels=(int)1
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:src: caps = video/x-raw-yuv, format=(fourcc)YV12, framerate=(fraction)25/1, width=(int)1280, height=(int)960, interlaced=(boolean)false, pixel-aspect-ratio=(fraction)1/1
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:sink: caps = video/x-raw-yuv, format=(fourcc)YV12, framerate=(fraction)25/1, width=(int)1280, height=(int)960, interlaced=(boolean)false, pixel-aspect-ratio=(fraction)1/1
+/GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0.GstPad:sink: caps = video/x-raw-yuv, format=(fourcc)YV12, framerate=(fraction)25/1, width=(int)1280, height=(int)960, interlaced=(boolean)false, pixel-aspect-ratio=(fraction)1/1
+/GstPipeline:pipeline0/GstPulseSink:pulsesink0: volume = 1.000000
+/GstPipeline:pipeline0/GstPulseSink:pulsesink0: mute = FALSE
+/GstPipeline:pipeline0/GstPulseSink:pulsesink0: volume = 1.000000
+/GstPipeline:pipeline0/GstPulseSink:pulsesink0: mute = FALSE
+/GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: queue-size = 8
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+WARNING: from element /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0: A lot of buffers are being dropped.
+Additional debug info:
+gstbasesink.c(2875): gst_base_sink_is_too_late (): /GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0:
+There may be a timestamping problem, or this computer is too slow.
+Got EOS from element "pipeline0".
+Execution ended after 57560178663 ns.
+Setting pipeline to PAUSED ...
+Setting pipeline to READY ...
+/GstPipeline:pipeline0/GstPulseSink:pulsesink0.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstV4l2Sink:v4l2sink0.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstRgLimiter:rglimiter0.GstPad:src: caps = NULL
+/GstPipeline:pipeline0/GstRgLimiter:rglimiter0.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:src: caps = NULL
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter1.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstVolume:volume0.GstPad:src: caps = NULL
+/GstPipeline:pipeline0/GstVolume:volume0.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstVideoRate:videorate0.GstPad:src: caps = NULL
+/GstPipeline:pipeline0/GstVideoRate:videorate0.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstAudioConvert:audioconvert0.GstPad:src: caps = NULL
+/GstPipeline:pipeline0/GstAudioConvert:audioconvert0.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstVideoFlip:videoflip0.GstPad:src: caps = NULL
+/GstPipeline:pipeline0/GstVideoFlip:videoflip0.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstWavParse:wavparse0.GstPad:src: caps = NULL
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter0.GstPad:src: caps = NULL
+/GstPipeline:pipeline0/GstCapsFilter:capsfilter0.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstFFMpegCsp:ffmpegcsp0.GstPad:src: caps = NULL
+/GstPipeline:pipeline0/GstFFMpegCsp:ffmpegcsp0.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstJpegDec:jpegdec0.GstPad:src: caps = NULL
+/GstPipeline:pipeline0/GstJpegDec:jpegdec0.GstPad:sink: caps = NULL
+/GstPipeline:pipeline0/GstMultipartDemux:multipartdemux0.GstPad:src_0: caps = NULL
+Setting pipeline to NULL ...
+Freeing pipeline ...

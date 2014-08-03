@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+     android:background="@drawable/background">
+
+    <ScrollView
+        android:id="@+id/ScrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/Back"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:layout_weight="0.10"
+                    android:background="@drawable/button_primary_selector"
+                    android:text="Back"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/text_car"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.23"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="car"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/Up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:layout_weight="0.12"
+                    android:background="@drawable/button_primary_selector"
+                    android:text="Up"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/Down"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:layout_weight="0.12"
+                    android:background="@drawable/button_primary_selector"
+                    android:text="Down"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/Left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:layout_weight="0.12"
+                    android:background="@drawable/button_primary_selector"
+                    android:text="Left"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/Right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:layout_weight="0.11"
+                    android:background="@drawable/button_primary_selector"
+                    android:text="Right"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="505dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/text_lift"
+                        android:layout_width="65dp"
+                        android:layout_height="50dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="lift"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Button
+                        android:id="@+id/liftUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Up" 
+                        android:background="@drawable/button_primary_selector"
+                android:textColor="@android:color/white"
+                android:layout_margin="@dimen/default_margin"/>
+
+                    <Button
+                        android:id="@+id/liftDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Down" 
+                        android:background="@drawable/button_primary_selector"
+                android:textColor="@android:color/white"
+                android:layout_margin="@dimen/default_margin"/>
+
+                    <TextView
+                        android:id="@+id/text_camera"
+                        android:layout_width="66dp"
+                        android:layout_height="46dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="camera"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Button
+                        android:id="@+id/cUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Up" 
+                        android:background="@drawable/button_primary_selector"
+                android:textColor="@android:color/white"
+                android:layout_margin="@dimen/default_margin"/>
+
+                    <Button
+                        android:id="@+id/cDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Down" 
+                        android:background="@drawable/button_primary_selector"
+                android:textColor="@android:color/white"
+                android:layout_margin="@dimen/default_margin"/>
+
+                    <Button
+                        android:id="@+id/cLeft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Left" 
+                        android:background="@drawable/button_primary_selector"
+                android:textColor="@android:color/white"
+                android:layout_margin="@dimen/default_margin"/>
+
+                    <Button
+                        android:id="@+id/cRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Right" 
+                        android:background="@drawable/button_primary_selector"
+              			android:textColor="@android:color/white"
+               		    android:layout_margin="@dimen/default_margin"/>
+                </LinearLayout>
+
+                <WebView
+                    android:id="@+id/WebView"
+                    android:src="@drawable/ic_cu" 
+                      android:layout_width="432dp"
+                android:layout_height="324dp" 
+                android:topLeftRadius="10dp"   
+            	 android:topRightRadius="10dp"    
+            	 android:bottomRightRadius="10dp"   
+             	android:bottomLeftRadius="10dp"
+                android:layout_margin="@dimen/no_margin"
+                />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</ScrollView>
