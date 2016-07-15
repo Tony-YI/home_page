@@ -1,0 +1,2 @@
+1.libstdc++.so.6 not found:
+copy the file in /usr/lib/x86_64-linux-gnu/libstdc++.so.6 to /usr/lib64

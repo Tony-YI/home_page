@@ -1,0 +1,158 @@
+#include "mbed.h"
+#include "Servo.h"
+
+//define pins//
+Serial pc( USBTX, USBRX );
+Servo servo1(p22);//x axis
+Servo servo2(p21);//y axis
+AnalogIn x_voltage(p15);//tilt x
+AnalogIn y_voltage(p16);//tilt y
+DigitalOut LED(LED1);
+DigitalOut P17(p17);//reduce noise a little bit
+DigitalOut P18(p18);//reduce noise a little bit
+DigitalOut P19(p19);//reduce noise a little bit
+DigitalOut P20(p20);//reduce noise a little bit
+DigitalOut P23(p23);//reduce noise a little bit
+DigitalOut P24(p24);//reduce noise a little bit
+DigitalOut P25(p25);//reduce noise a little bit
+DigitalOut P26(p26);//reduce noise a little bit
+
+//global variable//
+//float x_balance_value = 1.39;
+//float y_balance_value = 1.37;
+float x_error_range = 0.005;//tolerance error
+float y_error_range = 0.005;//tolerance error
+float x_temp = 0.5;//servo1 out, balanced
+float y_temp = 0.5;//servo2 out, balanced
+float x_value = 0;//tilt x
+float y_value = 0;//tilt y
+float x_balance_value;//tilt when x is balance
+float y_balance_value;//tilt when y is balance
+float x_error = 0.0f, y_error = 0.0f;//error in x/y axis
+float x_last_error = 0.0f, y_last_error = 0.0f;//last error in x/y axis
+float x_int = 0.0f, y_int = 0.0f;//integration
+float x_dif = 0.0f, y_dif = 0.0f;//differential 
+float KP = 0.027f;//0.03f;
+float KI = 0.00005f;
+float KD = 0.015f;//0.0011f;
+
+float filter = 0.35;//low pass filter
+
+//get the balance value of x and y//
+float get_balance_value( int mode )//0 for x, 1 for y
+{
+    float temp = 0.0f;
+    for( int i = 0; i < 50; i++ )
+    {
+        if( mode == 0 )
+        {
+            temp += x_voltage * 3.3;
+        }
+        if( mode == 1 )
+        {
+            temp += y_voltage * 3.3;
+        }
+    }
+    temp /= 50;
+    return temp;
+}
+
+//PID algorithm//
+void PID( float value, float balance_value, int mode )//0 for x, 1 for y
+{
+    float pid;
+    if( mode == 0 )
+    {
+        x_error = value - balance_value;
+        x_int += x_error;
+        x_dif = x_error - x_last_error;
+        x_last_error = x_error;
+        
+        if( x_int > 2.59f ){ x_int = 2.50f; }
+        if( x_int < -2.50f ){ x_int = -2.50f; }
+        pid = KP * x_error + KI * x_int + KD * x_dif;
+        x_temp += pid;
+        if( x_temp > 1 ){ x_temp = 1.0f; }
+        if( x_temp < 0 ){ x_temp = 0.0f; }
+    }
+    else if( mode == 1 )
+    {
+        y_error = value - balance_value;
+        y_int += y_error;
+        y_dif = y_error - y_last_error;
+        y_last_error = y_error;
+        
+        if( y_int > 2.50f ){ y_int = 2.50f; }
+        if( y_int < -2.50f ){ y_int = -2.50f; }
+        pid = KP * y_error + KI * y_int + KD * y_dif;
+        y_temp -= pid;
+        if( y_temp > 1 ){ y_temp = 1.0f; }
+        if( y_temp < 0 ){ y_temp = 0.0f; }
+    }  
+}
+
+void reset_int( int mode )//0 for x, 1 for y, reset the integration value
+{
+    if( mode == 0 )
+    {
+        x_int = 0.0f;
+    }
+    if( mode == 1 )
+    {
+        y_int = 0.0f;
+    }
+}
+
+int main()
+{
+    //calibrate servos//
+    servo1.calibrate(0.001, 90.0); 
+    servo2.calibrate(0.001, 90.0);
+    
+    //get balance value of x and y//
+    servo1 = 0.5;
+    servo2 = 0.5;
+    wait(1);
+    x_balance_value = get_balance_value(0);
+    y_balance_value = get_balance_value(1);
+    
+    /*****************start*****************/
+    LED = 1;
+    while(1)
+    {
+        servo1 = x_temp;
+        servo2 = y_temp;
+        
+        //get tilt value//
+        x_value = x_voltage * 3.3;
+        y_value = y_voltage * 3.3;
+        
+        if( abs(x_value - x_balance_value) <= filter )
+        {
+            //PID result
+            if( abs(x_value - x_balance_value) >= x_error_range )
+            {
+                PID( x_value, x_balance_value, 0 );
+            }
+        }
+        if( abs(y_value - y_balance_value) <= filter )
+        {
+            if( abs(y_value - y_balance_value) >= y_error_range )
+            {
+                PID( y_value, y_balance_value, 1 );
+            }
+        }
+        //reset integral value
+        if( abs(x_value - x_balance_value) < x_error_range )
+        {
+            reset_int( 0 );
+        }
+        if( abs(y_value - y_balance_value) < y_error_range )
+        {
+            reset_int( 1 );
+        }
+        //print out the datas//
+        //pc.printf("Voltage_X: %5.3f,     Voltage_Y: %5.3f\n\r", x_value, y_value);
+        wait(0.01);
+    }
+}

@@ -1,0 +1,4 @@
+network={
+	ssid="intelcup"
+	psk="00000000"
+}

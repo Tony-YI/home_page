@@ -1,0 +1,3 @@
+SANITY_VERSION 1
+TMPDIR /home/edward/ESDC/yoctoprojectbuild/tmp
+SSTATE_DIR /home/edward/ESDC/yoctoprojectbuild/sstate-cache

@@ -1,0 +1,202 @@
+volume:  volume: Volume
+uridecodebin:  decodebin2: Decoder Bin
+uridecodebin:  uridecodebin: URI Decoder
+playback:  playbin: Player Bin
+playback:  playbin2: Player Bin 2
+playback:  playsink: Player Sink
+playback:  subtitleoverlay: Subtitle Overlay
+videoscale:  videoscale: Video scaler
+xvimagesink:  xvimagesink: Video sink
+typefindfunctions: video/x-ms-asf: asf, wm, wma, wmv
+typefindfunctions: audio/x-musepack: mpc, mpp, mp+
+typefindfunctions: audio/x-au: au, snd
+typefindfunctions: video/x-msvideo: avi
+typefindfunctions: audio/qcelp: qcp
+typefindfunctions: video/x-cdxa: dat
+typefindfunctions: video/x-vcd: dat
+typefindfunctions: audio/x-imelody: imy, ime, imelody
+typefindfunctions: audio/midi: mid, midi
+typefindfunctions: audio/riff-midi: mid, midi
+typefindfunctions: audio/mobile-xmf: mxmf
+typefindfunctions: video/x-fli: flc, fli
+typefindfunctions: application/x-id3v2: mp3, mp2, mp1, mpga, ogg, flac, tta
+typefindfunctions: application/x-id3v1: mp3, mp2, mp1, mpga, ogg, flac, tta
+typefindfunctions: application/x-apetag: mp3, ape, mpc, wv
+typefindfunctions: audio/x-ttafile: tta
+typefindfunctions: audio/x-mod: 669, amf, dsm, gdm, far, imf, it, med, mod, mtm, okt, sam, s3m, stm, stx, ult, xm
+typefindfunctions: audio/mpeg: mp3, mp2, mp1, mpga
+typefindfunctions: audio/x-ac3: ac3, eac3
+typefindfunctions: audio/x-dts: dts
+typefindfunctions: audio/x-gsm: gsm
+typefindfunctions: video/mpeg-sys: mpe, mpeg, mpg
+typefindfunctions: video/mpegts: ts, mts
+typefindfunctions: application/ogg: anx, ogg, ogm
+typefindfunctions: video/mpeg-elementary: mpv, mpeg, mpg
+typefindfunctions: video/mpeg4: m4v
+typefindfunctions: video/x-h263: h263, 263
+typefindfunctions: video/x-h264: h264, x264, 264
+typefindfunctions: video/x-nuv: nuv
+typefindfunctions: audio/x-m4a: m4a
+typefindfunctions: application/x-3gp: 3gp
+typefindfunctions: video/quicktime: mov
+typefindfunctions: image/x-quicktime: qif, qtif, qti
+typefindfunctions: image/jp2: jp2
+typefindfunctions: video/mj2: mj2
+typefindfunctions: text/html: htm, html
+typefindfunctions: application/vnd.rn-realmedia: ra, ram, rm, rmvb
+typefindfunctions: application/x-pn-realaudio: ra, ram, rm, rmvb
+typefindfunctions: application/x-shockwave-flash: swf, swfl
+typefindfunctions: video/x-flv: flv
+typefindfunctions: text/plain: txt
+typefindfunctions: text/utf-16: txt
+typefindfunctions: text/utf-32: txt
+typefindfunctions: text/uri-list: ram
+typefindfunctions: application/x-hls: m3u8
+typefindfunctions: application/sdp: sdp
+typefindfunctions: application/smil: smil
+typefindfunctions: application/xml: xml
+typefindfunctions: audio/x-wav: wav
+typefindfunctions: audio/x-aiff: aiff, aif, aifc
+typefindfunctions: audio/x-svx: iff, svx
+typefindfunctions: audio/x-paris: paf
+typefindfunctions: audio/x-nist: nist
+typefindfunctions: audio/x-voc: voc
+typefindfunctions: audio/x-sds: sds
+typefindfunctions: audio/x-ircam: sf
+typefindfunctions: audio/x-w64: w64
+typefindfunctions: audio/x-shorten: shn
+typefindfunctions: application/x-ape: ape
+typefindfunctions: image/jpeg: jpg, jpe, jpeg
+typefindfunctions: image/gif: gif
+typefindfunctions: image/png: png
+typefindfunctions: image/bmp: bmp
+typefindfunctions: image/tiff: tif, tiff
+typefindfunctions: image/x-portable-pixmap: pnm, ppm, pgm, pbm
+typefindfunctions: video/x-matroska: mkv, mka
+typefindfunctions: video/webm: webm
+typefindfunctions: application/mxf: mxf
+typefindfunctions: video/x-mve: mve
+typefindfunctions: video/x-dv: dv, dif
+typefindfunctions: audio/x-amr-nb-sh: amr
+typefindfunctions: audio/x-amr-wb-sh: amr
+typefindfunctions: audio/iLBC-sh: ilbc
+typefindfunctions: audio/x-sid: sid
+typefindfunctions: image/x-xcf: xcf
+typefindfunctions: video/x-mng: mng
+typefindfunctions: image/x-jng: jng
+typefindfunctions: image/x-xpixmap: xpm
+typefindfunctions: image/x-sun-raster: ras
+typefindfunctions: application/x-bzip: bz2
+typefindfunctions: application/x-gzip: gz
+typefindfunctions: application/zip: zip
+typefindfunctions: application/x-compress: Z
+typefindfunctions: subtitle/x-kate: no extensions
+typefindfunctions: audio/x-flac: flac
+typefindfunctions: audio/x-vorbis: no extensions
+typefindfunctions: video/x-theora: no extensions
+typefindfunctions: application/x-ogm-video: no extensions
+typefindfunctions: application/x-ogm-audio: no extensions
+typefindfunctions: application/x-ogm-text: no extensions
+typefindfunctions: audio/x-speex: no extensions
+typefindfunctions: audio/x-celt: no extensions
+typefindfunctions: application/x-ogg-skeleton: no extensions
+typefindfunctions: text/x-cmml: no extensions
+typefindfunctions: application/x-executable: no extensions
+typefindfunctions: audio/aac: aac, adts, adif, loas
+typefindfunctions: audio/x-spc: spc
+typefindfunctions: audio/x-wavpack: wv, wvp
+typefindfunctions: audio/x-wavpack-correction: wvc
+typefindfunctions: application/postscript: ps
+typefindfunctions: image/svg+xml: svg
+typefindfunctions: application/x-rar: rar
+typefindfunctions: application/x-tar: tar
+typefindfunctions: application/x-ar: a
+typefindfunctions: application/x-ms-dos-executable: dll, exe, ocx, sys, scr, msstyles, cpl
+typefindfunctions: video/x-dirac: no extensions
+typefindfunctions: multipart/x-mixed-replace: no extensions
+typefindfunctions: application/x-mmsh: no extensions
+typefindfunctions: video/vivo: viv
+typefindfunctions: audio/x-nsf: nsf
+typefindfunctions: audio/x-gym: gym
+typefindfunctions: audio/x-ay: ay
+typefindfunctions: audio/x-gbs: gbs
+typefindfunctions: audio/x-vgm: vgm
+typefindfunctions: audio/x-sap: sap
+typefindfunctions: video/x-ivf: ivf
+typefindfunctions: audio/x-kss: kss
+typefindfunctions: application/pdf: pdf
+typefindfunctions: application/msword: doc
+typefindfunctions: application/octet-stream: DS_Store
+typefindfunctions: image/vnd.adobe.photoshop: psd
+typefindfunctions: image/vnd.wap.wbmp: no extensions
+typefindfunctions: application/x-yuv4mpeg: y4m
+typefindfunctions: image/x-icon: no extensions
+typefindfunctions: xdgmime-base: no extensions
+typefindfunctions: image/x-degas: no extensions
+theora:  theoradec: Theora video decoder
+theora:  theoraenc: Theora video encoder
+theora:  theoraparse: Theora video parser
+flac:  flacenc: FLAC audio encoder
+flac:  flacdec: FLAC audio decoder
+flac:  flactag: FLAC tagger
+ffmpegcolorspace:  ffmpegcolorspace: FFMPEG Colorspace converter
+vorbis:  vorbisenc: Vorbis audio encoder
+vorbis:  vorbisdec: Vorbis audio decoder
+vorbis:  vorbisparse: VorbisParse
+vorbis:  vorbistag: VorbisTag
+decodebin:  decodebin: Decoder Bin
+audioconvert:  audioconvert: Audio converter
+gio:  giosink: GIO sink
+gio:  giosrc: GIO source
+gio:  giostreamsink: GIO stream sink
+gio:  giostreamsrc: GIO stream source
+coreelements:  capsfilter: CapsFilter
+coreelements:  fakesrc: Fake Source
+coreelements:  fakesink: Fake Sink
+coreelements:  fdsrc: Filedescriptor Source
+coreelements:  fdsink: Filedescriptor Sink
+coreelements:  filesrc: File Source
+coreelements:  funnel: Funnel pipe fitting
+coreelements:  identity: Identity
+coreelements:  input-selector: Input selector
+coreelements:  output-selector: Output selector
+coreelements:  queue: Queue
+coreelements:  queue2: Queue 2
+coreelements:  filesink: File Sink
+coreelements:  tee: Tee pipe fitting
+coreelements:  typefind: TypeFind
+coreelements:  multiqueue: MultiQueue
+coreelements:  valve: Valve element
+wavparse:  wavparse: WAV audio demuxer
+autodetect:  autovideosink: Auto video sink
+autodetect:  autovideosrc: Auto video source
+autodetect:  autoaudiosink: Auto audio sink
+autodetect:  autoaudiosrc: Auto audio source
+coreindexers:  memindex: A index that stores entries in memory
+coreindexers:  fileindex: A index that stores entries in file
+ximagesink:  ximagesink: Video sink
+alsa:  alsamixer: Alsa mixer
+alsa:  alsasrc: Audio source (ALSA)
+alsa:  alsasink: Audio sink (ALSA)
+id3demux:  id3demux: ID3 tag demuxer
+audioresample:  audioresample: Audio resampler
+soup:  souphttpsrc: HTTP client source
+soup:  souphttpclientsink: HTTP client sink
+matroska:  matroskademux: Matroska demuxer
+matroska:  matroskaparse: Matroska parser
+matroska:  matroskamux: Matroska muxer
+matroska:  webmmux: WebM muxer
+ogg:  oggdemux: Ogg demuxer
+ogg:  oggmux: Ogg muxer
+ogg:  ogmaudioparse: OGM audio stream parser
+ogg:  ogmvideoparse: OGM video stream parser
+ogg:  ogmtextparse: OGM text stream parser
+ogg:  oggparse: Ogg parser
+ogg:  oggaviparse: Ogg AVI parser
+avi:  avidemux: Avi demuxer
+avi:  avimux: Avi muxer
+avi:  avisubtitle: Avi subtitle parser
+staticelements:  bin: Generic bin
+staticelements:  pipeline: Pipeline object
+
+Total count: 26 plugins, 200 features
